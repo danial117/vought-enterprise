@@ -8,10 +8,16 @@ import Join from "./Join";
 import { useDispatch, useSelector } from "react-redux";
  import {AccountCircle, ContactEmergency,Menu,CloseRounded} from '@mui/icons-material';
  import Contact from "./Contact";
+ import Info from './Info';
+ import {setHome} from'../state'
+import HomePage from "./Homepage";
+import Footer from './footer';
 
 
 
 const Navbar=()=> {
+    const home=useSelector((state)=>state.home);
+    const dispatch=useDispatch();
     const mobile_screens= useMediaQuery('(min-width:576px)')
     const user=useSelector((state)=>state.user);
     const fullName=user.firstname +' '+ user.lastname;
@@ -20,6 +26,7 @@ const Navbar=()=> {
     const[Form,Set_Form]=useState(false);
     const[contactUs,SetcontactUs]=useState(false);
     const[Toggle,SetToggle]=useState(false);
+    const[InfoPage,SetInfoPage]=useState(false);
 
 
 
@@ -118,23 +125,36 @@ const Navbar=()=> {
     function Info_Expansion(){
         const rootElements=document.getElementById('root');
         rootElements.style.position = 'relative';  
-        navigate('/info');
-        navigate(0)
+
+        if(InfoPage === false){
+        dispatch(setHome(false));
+        SetInfoPage(true);
+        Set_Form(false);
+        SetcontactUs(false);
+        }
+
+
+        if(InfoPage === true){
+            SetInfoPage(false);
+            Set_Form(false);
+            dispatch(setHome(true));
+        }
+        
+       
 
     }
 
 
 
     function HomePage_Expansion(){
-       navigate('/');
-       navigate(0);
+       dispatch(setHome(true) );
+       SetInfoPage(false);
         const rootElements=document.getElementById('root');
         rootElements.style.position = 'relative';  
         if(Form === true){
             Set_Form(false);
             rootElements.style.position = 'relative';  
-            navigate('/'); 
-            navigate(0);                
+                           
         };               
         }
   
@@ -174,6 +194,8 @@ const Navbar=()=> {
         </div>
         {Form && <Join/>}
         {contactUs && <Contact />}
+        {home && <HomePage />}
+        {InfoPage && <Info/>}
 
 
         
@@ -190,7 +212,7 @@ const Navbar=()=> {
 
 
 
-
+        <Footer/>
       </Box>
       
      

@@ -3,9 +3,12 @@ import Footer from './footer';
 import '../css/style.css'
 import Navbar from "./Navbar";
 import Home_Heading from"../assets/Main_Page_2.jpg"
+import {setHome} from '../state'
+import { useSelector } from 'react-redux';
 
 
 const HomePage=()=>{
+    const home=useSelector((state)=>state.home)
    
    
 
@@ -19,10 +22,17 @@ const HomePage=()=>{
 
 
     return(
-        <>
-        <Navbar />
-       
+        
 
+        
+        
+        
+       
+        
+        home && (
+            <>
+           
+           
         <div className="main-heading">
            <div className='heading-info'>
            <h1 >
@@ -30,7 +40,7 @@ const HomePage=()=>{
             </h1>
 
             <p>Vought is a home that you need.The World makes men. We make them heroes</p>
-
+        
             <Button sx={{padding:'5px',
              background:'red',color:'white',transition:'0.4s ease',
              '&:hover':{border:'none',background:'white',padding:'6px',fontSize:'18px',  color:'red',transition:'0.5s ease'}
@@ -51,8 +61,14 @@ const HomePage=()=>{
                </div>
         </div>
 
-        <Footer/>
+
+        
         </>
+        )
+       
+    
+        
+           
 
 
 

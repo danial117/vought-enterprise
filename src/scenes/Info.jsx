@@ -8,6 +8,7 @@ import info_2 from '../assets/info_2.png'
 import info_3 from '../assets/info_3.jpg'
 import Navbar from './Navbar';
 import Footer from './footer';
+import {setHome} from '../state'
 
 
 
@@ -17,10 +18,11 @@ import Footer from './footer';
 
  
 const Info =() => {
+      
   
     return(
         <>
-       <Navbar />
+      
         <div className='info_main'>
           <div className='CEO'></div>
           <div className='Vought'>
@@ -49,7 +51,7 @@ const Info =() => {
         
          </Carousel>
 
-         <Footer />
+        
 
        
 

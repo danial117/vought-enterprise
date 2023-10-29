@@ -66,6 +66,8 @@ const Join=()=>{
         .catch((error) => {
           console.error('Error:', error);
         });
+
+       
         
           
        
@@ -98,7 +100,7 @@ const Join=()=>{
           console.error('Error:', error);
         });
         
-        OnSubmitProps.resetForm();
+       
            
 
       }
@@ -154,7 +156,7 @@ const Join=()=>{
         <Formik
         onSubmit={OnSubmit}
         validationSchema={Sign_up_Schema}
-        initialValues={islogin ? initial_Values_login : initial_Values_register}
+        initialValues={ initial_Values_register}
         >
         {({values,
             errors,
@@ -221,7 +223,7 @@ const Join=()=>{
            
 
            <Typography >
-            <Button  type='submit'>Submit</Button>
+            <Button onClick={resetForm}  type='submit'>Submit</Button>
             </Typography>
 
             {

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import HomePage from './scenes/Homepage';
-import Info from './scenes/Info'
+import Navbar from './scenes/Navbar'
+
 
 
 
@@ -11,8 +11,8 @@ const App=() =>{
     <BrowserRouter basename="/react-app">
 
     <Routes>
-        <Route path={'/'} element={<HomePage/> } />
-        <Route path={'/info'} element={<Info/>}/>
+        <Route path={'/'} element={<Navbar/> } />
+       
     </Routes>
     
     
