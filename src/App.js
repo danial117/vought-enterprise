@@ -8,7 +8,7 @@ import Info from './scenes/Info'
 const App=() =>{
     return(
         <div className='app'>
-    <BrowserRouter basename="/voughtproxy">
+    <BrowserRouter basename="/voughtinternationals">
 
     <Routes>
         <Route path={'/'} element={<HomePage/> } />
