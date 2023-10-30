@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/vought-enterprise/static/css/main.eb1e7552.css",
+    "main.js": "/vought-enterprise/static/js/main.8f8ca052.js",
+    "static/media/Main_Page_1.jpg": "/vought-enterprise/static/media/Main_Page_1.413175c3cd2578b28c94.jpg",
+    "static/media/Form_1.jpg": "/vought-enterprise/static/media/Form_1.d551f0f99c92ea137b0e.jpg",
+    "static/media/info_3.jpg": "/vought-enterprise/static/media/info_3.8a11e389282866ecec0b.jpg",
+    "static/media/info_1.png": "/vought-enterprise/static/media/info_1.1e1a14028764a95f716b.png",
+    "static/media/Main_Page_2.jpg": "/vought-enterprise/static/media/Main_Page_2.cc5a3ba0676e96dcaf3e.jpg",
+    "static/media/Godokin_university.jpg": "/vought-enterprise/static/media/Godokin_university.477a0ce9884904bbe2b8.jpg",
+    "static/media/info_2.png": "/vought-enterprise/static/media/info_2.d63cdfc7c0a2a9d50849.png",
+    "static/media/Vought.jpg": "/vought-enterprise/static/media/Vought.b523f8c632fac1ebe08a.jpg",
+    "index.html": "/vought-enterprise/index.html",
+    "main.eb1e7552.css.map": "/vought-enterprise/static/css/main.eb1e7552.css.map",
+    "main.8f8ca052.js.map": "/vought-enterprise/static/js/main.8f8ca052.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb1e7552.css",
+    "static/js/main.8f8ca052.js"
+  ]
+}
